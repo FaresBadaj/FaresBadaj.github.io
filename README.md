@@ -8,8 +8,9 @@ Static, dependency-free site (HTML + CSS + a little vanilla JS). No build step, 
 
 ```
 index.html          single-page site
-assets/styles.css   design system, light + dark themes
+assets/styles.css   design system, light + dark themes, aurora background
 assets/main.js      theme toggle, scroll reveals
+assets/fares-badaj.jpg  hero portrait
 assets/favicon.svg  monogram favicon
 ```
 
