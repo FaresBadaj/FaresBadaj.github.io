@@ -1156,15 +1156,22 @@ h2 {
 
 /* ---------- reveal animation ---------- */
 
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+@media print {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ---------- responsive ---------- */
@@ -1263,7 +1270,7 @@ h2 {
     scroll-behavior: auto;
   }
 
-  .reveal {
+  .js .reveal {
     opacity: 1;
     transform: none;
     transition: none;

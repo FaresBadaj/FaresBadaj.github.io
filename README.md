@@ -3,6 +3,7 @@
 Personal portfolio of **Fares Badaj** — red team operator and penetration tester.
 
 Static, dependency-free site (HTML + CSS + a little vanilla JS). No build step, no trackers.
+The night (dark) theme is the default; visitors can switch to light with the header toggle.
 
 ## Structure
 

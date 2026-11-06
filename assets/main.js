@@ -3,15 +3,8 @@
 
   var root = document.documentElement;
   var toggle = document.getElementById("themeToggle");
-  var media = window.matchMedia("(prefers-color-scheme: dark)");
 
-  function storedTheme() {
-    try {
-      return localStorage.getItem("theme");
-    } catch (err) {
-      return null;
-    }
-  }
+  root.classList.add("js");
 
   function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
@@ -21,7 +14,7 @@
     }
   }
 
-  applyTheme(root.getAttribute("data-theme") || (media.matches ? "dark" : "light"));
+  applyTheme(root.getAttribute("data-theme") === "light" ? "light" : "dark");
 
   if (toggle) {
     toggle.addEventListener("click", function () {
@@ -31,14 +24,6 @@
         localStorage.setItem("theme", next);
       } catch (err) {
         /* storage unavailable — theme still applies for this session */
-      }
-    });
-  }
-
-  if (media.addEventListener) {
-    media.addEventListener("change", function (event) {
-      if (!storedTheme()) {
-        applyTheme(event.matches ? "dark" : "light");
       }
     });
   }
